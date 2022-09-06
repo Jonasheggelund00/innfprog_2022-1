@@ -8,6 +8,7 @@
     <link href="task1.css" rel="stylesheet" media="all">
 </head>
 <body>
+    
     <div id="gamearea">
         <section id="hud-top">
             <div id="lives"><img src="img/potions.png" /> <span id="lives-count">0</span></div>
@@ -16,6 +17,7 @@
                 <img src="img/person.png" />
                 <span id="playername">Marius</span>
             </div>
+            
             <div id="points"><img src="img/points.png" /> <span id="points-count">0</span></div>
         </section>
         <aside id="hud-inventory">
@@ -40,5 +42,50 @@
             </table>
         </aside>
     </div>
+    <script>
+
+        // oppgave 1: spillernavn
+        const playerName ="Hiof"
+document.getElementById("playername"). innerHTML =playerName; // skrive en utkjøringskode som sier det at endrer man på "playername" så endres navnet
+
+
+let coins = 15
+document.getElementById("coins-count"). innerHTML =coins;
+
+
+let lives = 5 
+
+document.getElementById("lives-count"). innerHTML =lives;
+
+
+let longsword = 1
+let warhammer = 4
+let battleaxe = 2
+let armour = 3
+
+document.getElementById("weapon-longsword"). innerHTML = longsword;
+document.getElementById("weapon-warhammer"). innerHTML = warhammer;
+document.getElementById("weapon-battleaxe"). innerHTML = battleaxe;
+document.getElementById("weapon-armour"). innerHTML = armour;
+
+//oppgave 5
+
+let points = (coins * 5) + (longsword * 5) + (warhammer * 15) + (battleaxe * 20) + (armour * 25)
+
+document.getElementById("points-count"). innerHTML = points
+
+
+// oppgave 1
+if (coins === 0) {
+document.getElementById("coins-count") . innerHTML = "Collect some coins"
+} else {
+    document.getElementById("coins-cound"). innerHTML = ""
+}
+
+
+
+
+
+    </script>
 </body>
 </html>
